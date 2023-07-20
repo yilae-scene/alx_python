@@ -3,7 +3,7 @@
 
 def is_prime(number):
     count = 0
-    # itereat through to find it is evenly divided morethan twice
+    # itereat through to find it is evenly divided morethan twice and counter
     for i in range (1 , number + 1):
         if (number % i == 0):
             count+=1
@@ -12,4 +12,4 @@ def is_prime(number):
     else:
         return False
 
-print(is_prime(0))
+print(is_prime(39))
