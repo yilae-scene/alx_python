@@ -12,4 +12,3 @@ def is_prime(number):
     else:
         return False
 
-print(is_prime(39))
