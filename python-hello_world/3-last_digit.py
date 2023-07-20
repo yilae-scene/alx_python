@@ -7,9 +7,9 @@ if number < 0:
     last_digit = number % -10
 else:
     last_digit = number % 10
-if last > 5:
+if last_digit > 5:
     print("Last digit of {} is {}".format(number, last_digit) + conca1)
-elif last == 0:
+elif last_digit == 0:
     print("Last digit of {} is {}".format(number, last_digit) + conca22)
 else:
-    print("Last digit of {} is {}".format(number, last_digit) + conca33)
+    print("Last digit of {} is {}".format(number, last_digit) + conca3)
