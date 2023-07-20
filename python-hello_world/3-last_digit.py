@@ -2,7 +2,6 @@ import random
 
 number = random.randint(-10000, 10000)
 
-# change the number to string and to get last_digit and save it as int.
 number1 = int(str(number)[-1])
 
 if (number < 0):
