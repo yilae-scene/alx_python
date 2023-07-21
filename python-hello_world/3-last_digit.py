@@ -11,7 +11,7 @@ if number < 0:
         print("Last digit of",number,"is",last_digit,"and is 0")
     else:
         print("Last digit of",number,"is",last_digit,"and is less than 6 and not 0")
-# if number is more than
+# if number is more than 0
 elif number > 0:
     last_digit = number % 10
     if last_digit > 5:
