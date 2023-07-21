@@ -5,9 +5,9 @@ def validate_password(password):
     length = len(password)
     # Have the conditions specified
     if (password.isupper() == False) == (password.islower() == False) and (length >= 8) and not(" " in password) and not(password.isalpha()):
-        print (True)
+        return True
     else:
-        print(False)
+        return False
  
 
 
