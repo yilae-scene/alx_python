@@ -9,5 +9,5 @@ def validate_password(password):
     else:
         print(False)
  
-validate_password("wllllllllllllllK2")
+
 
