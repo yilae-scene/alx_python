@@ -2,7 +2,6 @@
 #...try and catch exception
 
 
-
 def safe_print_divison(a , b):
     try:
         result = a / b
