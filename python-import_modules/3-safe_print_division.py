@@ -12,4 +12,4 @@ def safe_print_divison(a , b):
         print("Inside result: {}".format(result))
         print("{:d} / {:d} = {}".format(a , b, result))
 
-safe_print_divison(12 ,0)
+
