@@ -5,11 +5,11 @@
 def safe_print_divison(a , b):
     try:
         result = a / b
+        return result
     except ZeroDivisionError:
         result = None
+        return result
     finally:
         print("Inside result: {}".format(result))
         print("{:d} / {:d} = {}".format(a , b, result))
-
-# safe_print_divison(a=10 , b=-5)
 
