@@ -5,15 +5,10 @@
 def safe_print_divison(a , b):
     try:
         result = a / b
-        return result
-    except ZeroDivisionError:
+    except (ZeroDivisionError,ValueError, TypeError):
         result = None
-        return result
     finally:
-        if result!=None:
-            print("Inside result: {}".format(result))
-            print("{:d} / {:d} = {}".format(a , b, result))
-        else:
-            print("Inside result: {}".format(result))
-            print("{:d} / {:d} = {}".format(a , b, result))
+        print("Inside result: {}".format(result))
+        print("{:d} / {:d} = {}".format(a , b, result))
+    return result
 
