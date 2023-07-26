@@ -8,7 +8,11 @@ def safe_print_divison(a , b):
     except ZeroDivisionError:
         result = None
     finally:
-        
-        print("Inside result: {}".format(result))
-        print("{:d} / {:d} = {}".format(a , b, result))
-        return result
+        if result!=None:
+            print("Inside result: {}".format(result))
+            print("{:d} / {:d} = {}".format(a , b, result))
+            return result
+        else:
+            print("Inside result: {}".format(result))
+            print("{:d} / {:d} = {}".format(a , b, result))
+safe_print_divison(10 , 0)
