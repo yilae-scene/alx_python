@@ -3,7 +3,7 @@
 
 def best_score(a_dictionary):
     try:
-        if a_dictionary == dit():
+        if a_dictionary == dict():
             return None
         else:
             new_value = list(a_dictionary.values())
