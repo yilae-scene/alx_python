@@ -1,4 +1,4 @@
 def multiply_list_map(mylist=[] , num = 0):
-    return list(map(lambda n : n * num, mylist))
+    return list(map(lambda n : n * num, mylist),end ='')
 
 
