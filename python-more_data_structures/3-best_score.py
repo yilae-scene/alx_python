@@ -14,6 +14,3 @@ def best_score(a_dictionary):
     except (ValueError, TypeError, AttributeError):
         return None
 
-
-a_dictionary = {'John': 14, 'Bob': 25, 'Mike': 10, 'Molly': 9, 'Adam': 112}
-print(best_score(a_dictionary))
