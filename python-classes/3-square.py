@@ -10,6 +10,7 @@ class Square:
         ''' the first init function that has a single
             parameter that is also privare.
         '''
+        
         if not isinstance(size, int):
             # check the type of size
             raise TypeError ('size must be an integer')
@@ -41,5 +42,4 @@ class Square:
     def area(self):
         # find the area of the square by multiplying itself
         return self.__size ** 2
-
 
