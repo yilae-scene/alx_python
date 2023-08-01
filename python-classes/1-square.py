@@ -4,7 +4,7 @@
 class Square:
     ''' defining the class of square and initializing it with a variable size '''
 
-    def __init__(self, size):
+    def __init__(self, size = 0):
         ''' the first init function that has a single
             parameter that is also privare.
         '''
