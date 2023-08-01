@@ -3,11 +3,11 @@
 '''
 class Square:
     ''' defining the class of square and initializing it with a variable size '''
-    
+
     def __init__(self, size):
         ''' the first init function that has a single
             parameter that is also privare.
         '''
         self.__size = size
 
-print(Square.__doc__)
+
