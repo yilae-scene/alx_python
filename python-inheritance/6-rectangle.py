@@ -23,8 +23,3 @@ class Rectangle(BaseGeometry):
         return [x for x in attributes if x != '__init_subclass__']
 
 
-# r2 = Rectangle(4, True)
-
-# print(r2)
-# print(dir(r2))
-
