@@ -8,7 +8,6 @@ def is_same_class(obj, a_class):
     '''
     #obj = object
     #a_class = Class
-    print(type(obj), type(a_class))
     if type(obj) == a_class:
         return True
     return False
