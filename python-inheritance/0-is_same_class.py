@@ -11,5 +11,4 @@ def is_same_class(obj, a_class):
         return True
     return False
 
-a = 1
-print(is_same_class(a,int))
+
