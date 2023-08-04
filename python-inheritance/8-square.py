@@ -26,7 +26,5 @@ class Square(Rectangle):
         return ("[Rectangle] {}/{}".format(self.__size, self.__size))
 
 
-# s = Square(13)
-
-# print(s)
-# print(s.area())
+def is_come():
+    pass
