@@ -6,6 +6,8 @@ BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
+    ''' the class is subclass of BaseGeometry and uses some function of the super class
+    '''
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
