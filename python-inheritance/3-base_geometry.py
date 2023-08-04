@@ -7,7 +7,3 @@ class BaseGeometry:
     ''' there will be some implementations here
     '''
     pass
-
-bg = BaseGeometry()
-
-
