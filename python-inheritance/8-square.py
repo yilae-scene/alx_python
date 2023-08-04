@@ -2,8 +2,11 @@
 class area to calculate that is sub-class of rectangle class
 '''
 # import a file with number and put it in variable called Rectagle
-
 Rectangle = __import__('7-rectangle').Rectangle
+
+'''
+class area to calculate that is sub-class of rectangle class
+'''
 
 
 class square(Rectangle):
