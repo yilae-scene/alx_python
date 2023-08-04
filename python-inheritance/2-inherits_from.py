@@ -9,6 +9,6 @@ def inherits_from(obj, a_class):
     '''
     # obj = object
     # a_class = class
-    if issubclass(obj, a_class):
+    if isinstance(obj, a_class):
         return True
     return False
