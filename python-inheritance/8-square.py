@@ -1,5 +1,6 @@
-# class area to calculate that is sub-class of rectangle class
-
+''' class area to calculate that is sub-class of rectangle class
+this is a class that inherits form the base_geomety class
+'''
 
 # import a file with number and put it in variable called Rectagle
 Rectangle = __import__('7-rectangle').Rectangle
@@ -24,6 +25,7 @@ class Square(Rectangle):
 
     def __str__(self):
         return ("[Rectangle] {}/{}".format(self.__size, self.__size))
+
 
 '''
 s = Square(13)
