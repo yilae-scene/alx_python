@@ -10,18 +10,21 @@ class Rectangle(BaseGeometry):
     '''
 
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+
 
     # check for value validation
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
 
     def __dir__(cls):
-        attributes = self.__dir__()
+        attributes = super().__dir__()
         return [x for x in attributes if x != '__init_subclass__']
 
 
+# r2 = Rectangle(4, True)
+
+# print(r2)
+# print(dir(r2))
 
