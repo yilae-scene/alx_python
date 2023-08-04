@@ -24,7 +24,7 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __dir__(cls):
-        attributes = self.__dir__()
+        attributes = super().__dir__()
         return [x for x in attributes if x != '__init_subclass__']
     def __str__(self):
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
