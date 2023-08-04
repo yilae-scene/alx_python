@@ -3,10 +3,13 @@
 '''
 
 def is_same_class(obj, a_class):
-    ''' check if the object is the instance of the class
+    ''' check if the object is the exact instance of the class
     '''
     #obj = object
     #a_class = Class
-    if isinstance(object, a_class):
+    if type(object) == type(a_class):
         return True
     return False
+
+a = 1
+print(is_same_class(a,int))
