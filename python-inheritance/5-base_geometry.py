@@ -14,6 +14,9 @@ class TopMeta(type):
         return [x for x in attributes if x != '__init_subclass__']
 
 
+# the main BaseGeomety class
+
+
 class BaseGeometry (metaclass=TopMeta):
 
     ''' the class raises a an exception'''
