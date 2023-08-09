@@ -7,7 +7,7 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' creat a class'''
 
 
-#from base import Base
+# from base import Base
 
 
 
@@ -108,5 +108,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
+
 
 Rectangle(10, 2, 3, -1)
