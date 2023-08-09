@@ -1,4 +1,3 @@
-from base import Base
 '''
 this is a rectangle class that inherits from its parent class Base class.
 '''
@@ -7,6 +6,7 @@ this is a rectangle class that inherits from its parent class Base class.
 ''' 
 lets import the Base class from base class py.
 '''
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
