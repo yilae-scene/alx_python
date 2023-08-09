@@ -7,9 +7,9 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' creat a class'''
 
 
-# from base import Base
+from base import Base
 
-from models.base import Base
+#from models.base import Base
 
 ''' import Base from models.base'''
 
