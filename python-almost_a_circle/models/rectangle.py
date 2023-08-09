@@ -23,37 +23,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        # private instances of the class.
-        # check for width
-        if type(width) is not int:
-            raise TypeError("width must be an integer.")
-        elif width <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__width = width
-        # check for height
-        if type(height) is not int:
-            raise TypeError("height must be an integer.")
-        elif height <= 0:
-            raise ValueError("height must be > 0")
-        else:
-            self.__height = height
-
-        # check for x
-        if type(height) is not int:
-            raise TypeError("x must be an integer.")
-        elif x < 0:
-            raise ValueError("x must be >= 0")
-        else:
-            self.__x = x
-
-        # check for y
-        if type(y) is not int:
-            raise TypeError("y must be an integer.")
-        elif y < 0:
-            raise ValueError("y must be >= 0")
-        else:
-            self.__y = y
+        
 
     @property
     # get the width by getter method
