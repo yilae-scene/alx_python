@@ -6,11 +6,13 @@ Here we have a subclass of a Base class that will use a private methods as insta
 
 ''' creat a class'''
 
-#from base import Base
+
+# from models.base import Base
 
 
-from models.base import Base
 
+
+from base import Base
 class Rectangle(Base):
     ''' define the class with private instances'''
 
@@ -108,6 +110,3 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
-# width = 5
-# print(type(width) != int)
-# #Rectangle('10', 2, 3, "kjkjk")
