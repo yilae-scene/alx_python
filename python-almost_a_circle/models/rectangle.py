@@ -1,9 +1,11 @@
+from base import Base
 '''
 this is a rectangle class that inherits from its parent class Base class.
 '''
-from base import Base
 
-''' lets import the Base class from base class py.
+
+''' 
+lets import the Base class from base class py.
 '''
 
 
