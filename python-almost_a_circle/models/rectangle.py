@@ -7,47 +7,49 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' creat a class'''
 
 
-#from base import Base
+# from base import Base
+
+
+
 
 from models.base import Base
-
-''' import Base from models.base'''
-
-
 class Rectangle(Base):
     ''' define the class with private instances'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         # initalize the class
         super().__init__(id)
+        # private instances of the class.
+        # check for width
+        if type(width) is not int:
+            raise TypeError("width must be an integer.")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+        # check for height
+        if type(height) is not int:
+            raise TypeError("height must be an integer.")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
 
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        # check for x
+        if type(height) is not int:
+            raise TypeError("x must be an integer.")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
 
-        # if type(height) is not int:
-        #     raise TypeError("height must be an integer.")
-        # elif height <= 0:
-        #     raise ValueError("height must be > 0")
-        # else:
-        #     self.__height = height
-
-        # # check for x
-        # if type(height) is not int:
-        #     raise TypeError("x must be an integer.")
-        # elif x < 0:
-        #     raise ValueError("x must be >= 0")
-        # else:
-        #     self.__x = x
-
-        # # check for y
-        # if type(y) is not int:
-        #     raise TypeError("y must be an integer.")
-        # elif y < 0:
-        #     raise ValueError("y must be >= 0")
-        # else:
-        #     self.__y = y
+        # check for y
+        if type(y) is not int:
+            raise TypeError("y must be an integer.")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
 
     @property
     # get the width by getter method
@@ -108,6 +110,3 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
-
-
-Rectangle(10, 2, 3, -1)
