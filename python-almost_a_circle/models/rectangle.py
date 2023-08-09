@@ -2,6 +2,7 @@
 this is a rectangle class that inherits from its parent class Base class.
 '''
 from base import Base
+
 ''' lets import the Base class from base class py.
 '''
 
@@ -49,7 +50,7 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    # set the x through x setter 
+    # set the x through x setter
     def set_width(self, x):
         self.__x = x
 
@@ -59,9 +60,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    # set the y through y setter 
+    # set the y through y setter
     def y(self, Y):
         self.__y = y
-
-
-
