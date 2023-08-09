@@ -4,10 +4,14 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' import a class Base from models folder'''
 
 
-from models.base import Base
 ''' creat a class'''
 
-#from base import Base
+from base import Base
+
+
+
+
+#from models.base import Base
 class Rectangle(Base):
     ''' define the class with private instances'''
 
@@ -15,10 +19,36 @@ class Rectangle(Base):
         # initalize the class
         super().__init__(id)
         # private instances of the class.
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        # check for width
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer.")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
+        # check for height
+        if not isinstance(height, int):
+            raise TypeError("height must be an integer.")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.__height = height
+
+        # check for x
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer.")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.__x = x
+
+        # check for y
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer.")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.__y = y
 
     @property
     # get the width by getter method
@@ -73,7 +103,7 @@ class Rectangle(Base):
     @y.setter
     # set y by setter method
     def y(self, y):
-        if not isinstance(y,int):
+        if not isinstance(y, int):
             raise TypeError("y must be an integer.")
         elif y < 0:
             raise ValueError("y must be > 0")
