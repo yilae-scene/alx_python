@@ -28,5 +28,3 @@ class Rectangle(BaseGeometry):
         return [x for x in attributes if x != '__init_subclass__']
     def __str__(self):
         return ("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-
