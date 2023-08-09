@@ -9,9 +9,8 @@ Here we have a subclass of a Base class that will use a private methods as insta
 #from base import Base
 
 
-
-
 from models.base import Base
+
 class Rectangle(Base):
     ''' define the class with private instances'''
 
