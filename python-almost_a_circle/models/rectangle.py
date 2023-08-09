@@ -108,6 +108,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = y
-width = 5
-print(type(width) != int)
-#Rectangle('10', 2, 3, "kjkjk")
+# width = 5
+# print(type(width) != int)
+# #Rectangle('10', 2, 3, "kjkjk")
