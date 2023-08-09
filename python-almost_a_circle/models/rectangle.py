@@ -20,7 +20,7 @@ class Rectangle(Base):
         super().__init__(id)
         # private instances of the class.
         # check for width
-        if not isinstance(width, int):
+        if not type(width) != int:
             raise TypeError("width must be an integer.")
         elif width <= 0:
             raise ValueError("width must be > 0")
