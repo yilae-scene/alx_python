@@ -25,7 +25,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        # check for height
+
         # if type(height) is not int:
         #     raise TypeError("height must be an integer.")
         # elif height <= 0:
