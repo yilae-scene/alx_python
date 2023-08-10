@@ -16,7 +16,7 @@ from models.base import Base
 class Rectangle(Base):
     ''' define the class with private instances'''
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x = 0, y = 0, id = None):
         # initalize the class
         super().__init__(id)
         # check the value of width
@@ -37,14 +37,14 @@ class Rectangle(Base):
         if type(x) is not int:
             raise TypeError("x must be an integer.")
         elif x < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
         else:
             self.__x = x
         # check the value of y
         if type(y) is not int:
             raise TypeError("y must be an integer.")
         elif y < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         else:
             self.__y = y
 
