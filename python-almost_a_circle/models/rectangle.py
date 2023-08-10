@@ -28,21 +28,21 @@ class Rectangle(Base):
             self.__width = width
         # check the value of height
         if type(height) is not int:
-            raise TypeError("height must be an integer.")
+            raise TypeError("height must be an integer")
         elif height <= 0:
             raise ValueError("height must be > 0")
         else:
             self.__height = height
         # check the value of x
         if type(x) is not int:
-            raise TypeError("x must be an integer.")
+            raise TypeError("x must be an integer")
         elif x < 0:
             raise ValueError("x must be >= 0")
         else:
             self.__x = x
         # check the value of y
         if type(y) is not int:
-            raise TypeError("y must be an integer.")
+            raise TypeError("y must be an integer")
         elif y < 0:
             raise ValueError("y must be >= 0")
         else:
@@ -57,7 +57,7 @@ class Rectangle(Base):
     # set width by setter method
     def width(self, value):
         if type(value) is not int:
-            raise TypeError("width must be an integer.")
+            raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
         else:
@@ -72,7 +72,7 @@ class Rectangle(Base):
     # set height by setter method
     def height(self, value):
         if type(value) is not int:
-            raise TypeError("height must be an integer.")
+            raise TypeError("height must be an integer")
         elif value <= 0:
             raise ValueError("height must be > 0")
         else:
@@ -87,7 +87,7 @@ class Rectangle(Base):
     # set x by setter method
     def x(self, value):
         if type(value) is not int:
-            raise TypeypeError("x must be an integer.")
+            raise TypeypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
         else:
@@ -102,7 +102,7 @@ class Rectangle(Base):
     # set y by setter method
     def y(self, value):
         if type(value) is not int:
-            raise TypeError("y must be an integer.")
+            raise TypeError("y must be an integer")
         elif value < 0:
             raise ValueError("y must be >= 0")
         else:
