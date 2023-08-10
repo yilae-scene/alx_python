@@ -6,7 +6,6 @@ Here we have a subclass of a Base class that will use a private methods as insta
 
 ''' creat a class'''
 
-
 #from base import Base
 
 
@@ -131,7 +130,7 @@ class Rectangle(Base):
         '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         ''' right a public method that assigns the argument to each attribute
         '''
         if len(args)> 0:
@@ -144,3 +143,15 @@ class Rectangle(Base):
             self.__x= args[3]
         if len(args)> 4:
             self.y = args[4]
+        if len(args)== 0:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__y = kwargs['y']
+
