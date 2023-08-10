@@ -7,7 +7,7 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' creat a class'''
 
 
-#from base import Base
+# from base import Base
 
 
 
@@ -16,7 +16,7 @@ from models.base import Base
 class Rectangle(Base):
     ''' define the class with private instances'''
 
-    def __init__(self, width, height, x = 0, y = 0, id = None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         # initalize the class
         super().__init__(id)
         # check the value of width
@@ -119,7 +119,11 @@ class Rectangle(Base):
         '''
         for h in range(self.__height):
             for w in range(self.__width):
-                print("#" ,end ='')
+                print("#", end='')
             print()
 
-
+    def __str__(self):
+        '''
+        override the str dunder method to print better info
+        '''
+        return "[Rectangle]({}){}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
