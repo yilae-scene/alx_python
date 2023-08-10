@@ -126,4 +126,4 @@ class Rectangle(Base):
         '''
         override the str dunder method to print better info
         '''
-        return "[Rectangle]({}){}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
