@@ -7,7 +7,7 @@ Here we have a subclass of a Base class that will use a private methods as insta
 ''' creat a class'''
 
 
-# from base import Base
+#from base import Base
 
 
 
@@ -112,3 +112,14 @@ class Rectangle(Base):
         ''' define an area that gets its results from height * width
         '''
         return (self.__height * self.__width)
+
+    def display(self):
+        '''
+        define a method that prints # based on width and height
+        '''
+        for h in range(self.__height):
+            for w in range(self.__width):
+                print("#" ,end ='')
+            print()
+
+
