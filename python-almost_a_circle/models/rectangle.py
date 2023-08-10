@@ -117,9 +117,12 @@ class Rectangle(Base):
         '''
         define a method that prints # based on width and height
         '''
-        for h in range(self.__height):
-            for w in range(self.__width):
-                print("#", end='')
+        for y in range(self.__y):
+            print()
+        for i in range(self.height):
+            print(' ' * self.__x, end='')
+            for j in range(self.width):
+                print('#', end='')
             print()
 
     def __str__(self):
@@ -127,3 +130,6 @@ class Rectangle(Base):
         override the str dunder method to print better info
         '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+
+
