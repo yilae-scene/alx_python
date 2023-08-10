@@ -6,12 +6,12 @@ Here we have a subclass of a Base class that will use a private methods as insta
 
 ''' creat a class'''
 
-#from base import Base
+from base import Base
 
 
 
 
-from models.base import Base
+#from models.base import Base
 class Rectangle(Base):
     ''' define the class with private instances'''
 
@@ -154,4 +154,17 @@ class Rectangle(Base):
                 self.__x = kwargs['x']
             if 'y' in kwargs:
                 self.__y = kwargs['y']
+
+r1 = Rectangle(10, 10, 10, 10)
+print(r1)
+r1.update(89)
+print(r1)
+r1.update(89, 2)
+print(r1)
+r1.update(89, 2, 3)
+print(r1)
+r1.update(89, 2, 3, 4)
+print(r1)
+r1.update(89, 2, 3, 4, 5)
+print(r1)
 
