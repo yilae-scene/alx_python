@@ -6,17 +6,19 @@ import requests
 import sys
 
 # an aleady defined url
-url = "http://0.0.0.0:5000/search_user"
 
 
-if __name__== "__main__":
-# work under dunder main to prevent the unwanted call-back 
-    def checks_json(url):
+def checks_json(q):
+    url = "http://0.0.0.0:5000/search_user"
+    r = requests.post(url, q)
+    return r
+if __name__ == "__main__":
+    # work under dunder main to prevent the unwanted call-back
         if len(sys.argv) >= 2:
             q = {"q": sys.argv[1]}
         elif len(sys.argv) == 1:
             q = ""
-        r = requests.post(url, q)
+        r = checks_json(q)
         re = r.json()
         try:
             if len(re) == 0:
@@ -27,4 +29,4 @@ if __name__== "__main__":
             print("Not a valid JSON")
 
 
-#checks_json(url)
+checks_json(url)
