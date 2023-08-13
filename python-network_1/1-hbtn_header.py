@@ -17,10 +17,15 @@ if __name__ == "__main__":
             try:
                 r = requests.get(url)
                 x = r.headers['X-Request-Id']
-                print(x)
+                if x :
+                    print(x)
+                else:
+                    print("None")
             except Exception as e:
                 print(e)
         else:
-            print("None")
+            if len(sys.argv) != 2:
+                print('inproper number of CLI arguments')
+ 
 url = sys.argv[1]
 request_x(url)
