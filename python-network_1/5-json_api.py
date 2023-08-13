@@ -23,7 +23,7 @@ if __name__== "__main__":
                 print("No result")
             else:
                 print("[{}] {}".format(re["id"], re["name"]))
-        except Exception as e:
+        except Exception:
             print("Not a valid JSON")
 
 
