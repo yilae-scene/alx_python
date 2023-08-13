@@ -19,8 +19,8 @@ if __name__ == "__main__":
         elif len(sys.argv) == 1:
             q = ""
         r = checks_json(q)
-        re = r.json()
         try:
+            re = r.json()
             if len(re) == 0:
                 print("No result")
             else:
