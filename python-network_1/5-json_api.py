@@ -8,25 +8,24 @@ import sys
 # an aleady defined url
 
 
-def search_user(letter):
-    url = 'http://0.0.0.0:5000/search_user'
-    response = requests.post(url, data={'q': letter})
-    return response
-
-
+def checks_json(q):
+    url = "http://0.0.0.0:5000/search_user"
+    r = requests.post(url, q)
+    return r
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("No result")
-        sys.exit(1)
+    # work under dunder main to prevent the unwanted call-back
+        if len(sys.argv) >= 2:
+            q = {"q": sys.argv[1]}
+        elif len(sys.argv) == 1:
+            q = ""
+        r = checks_json(q)
+        re = r.json()
+        try:
+            if len(re) == 0:
+                print("No result")
+            else:
+                print("[{}] {}".format(re["id"], re["name"]))
+        except Exception:
+            print("Not a valid JSON")
 
-    letter = sys.argv[1]
 
-    response = search_user(letter)
-    try:
-        data = response.json()
-        if data:
-            print("[{}] {}".format(data.get('id'), data.get('name')))
-        else:
-            print("No Result")
-    except ValueError:
-        print("Not a valid JSON")
