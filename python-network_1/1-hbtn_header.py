@@ -26,7 +26,4 @@ if __name__ == "__main__":
  
 url = sys.argv[1]
 request_x(url)
-# if new_x:
-#     print(new_x)
-# else:
-#     print("None")
+
