@@ -10,7 +10,7 @@ url = "http://0.0.0.0:5000/search_user"
 
 
 if __name__== "__main__":
-# work under dunder main to prevent the unwanted call back 
+# work under dunder main to prevent the unwanted call-back 
     def checks_json(url):
         if len(sys.argv) >= 2:
             q = {"q": sys.argv[1]}
