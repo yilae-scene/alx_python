@@ -27,4 +27,4 @@ if __name__== "__main__":
             print("Not a valid JSON")
 
 
-checks_json(url)
+#checks_json(url)
