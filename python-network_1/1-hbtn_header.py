@@ -21,9 +21,6 @@ if __name__ == "__main__":
             except Exception as e:
                 print(e)
         else:
-            if len(sys.argv) != 2:
-                print('inproper number of CLI arguments')
-            else:
-                print("None")
+            print("None")
 url = sys.argv[1]
 request_x(url)
