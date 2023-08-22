@@ -14,7 +14,8 @@ if __name__ == "__main__":
     # create connection to database using mysqldb
 
     mydb = MySQLdb.connect(
-        host='localhost', user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
+        host='localhost', user=sys.argv[1], passwd=sys.argv[2],
+        port=3306, db=sys.argv[3])
 
     # create cursor
     cur = mydb.cursor()
@@ -27,8 +28,5 @@ if __name__ == "__main__":
     for result in results:
         print(result)
 
-    '''make sure it is stated in the mysql database'''
     mydb.commit()
-
-    '''close cursor'''
     cur.close()
