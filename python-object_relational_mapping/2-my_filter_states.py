@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # create cursor
     cur = mydb.cursor()
     cur.execute(
-        "SELECT id, name FROM states WHERE name = '{}'".format(sys.argv[4]))
+        "SELECT id, name FROM states WHERE name = '{}' AND ASCII (name) < 97".format(sys.argv[4]))
 
     # fetch the results
     results = cur.fetchall()
