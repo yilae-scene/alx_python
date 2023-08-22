@@ -14,6 +14,10 @@ if __name__ == "__main__":
     cur = mydb.cursor()
     cur.execute("SELECT FROM states WHERE name == {} Order by states.id", format(sys.argv[4]))
 
+    # fetch the results
+    results = cur.fetchall()
+    for result in results:
+        print(result)
     # commit and close
     mydb.commt()
     cur.close()
