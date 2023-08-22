@@ -1,7 +1,7 @@
 '''
 we start our projects by importing MySQLdb
-and using it to link to MySQL 
-database we have created before. 
+and using it to link to MySQL
+database we have created before.
 '''
 # import Mysqldb
 # import sys
