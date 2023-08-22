@@ -27,7 +27,5 @@ if __name__ == "__main__":
     # print all states
     for result in results:
         print(result)
-
-    # commit and close
     mydb.commit()
     cur.close()
