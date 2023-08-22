@@ -1,5 +1,5 @@
 '''
- we start our projects by importing MySQLdb and using it to link to MySQL database we have created before. 
+we start our projects by importing MySQLdb and using it to link to MySQL database we have created before. 
 '''
 # import Mysqldb
 # import sys
@@ -8,11 +8,11 @@ import sys
 """
 make sure your code works on main page of the python module
 """
-if "__name__" == "__main__":
+if __name__ == "__main__":
     # create connection to database using mysqldb
 
-    mydb = MySQLdb.connect(host='localhost', user=sys.argv[1],
-                           passwd=sys.argv[2], port=3306, db=sys.argv[3])
+    mydb = MySQLdb.connect(
+        host='localhost', user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
 
     # create cursor
     cur = mydb.cursor()
@@ -27,3 +27,7 @@ if "__name__" == "__main__":
 
     # make sure it is stated in the mysql database
     db.commit()
+
+    # close cursor
+    cur.close()
+    
