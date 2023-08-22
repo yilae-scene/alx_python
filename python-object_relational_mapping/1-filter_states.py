@@ -19,7 +19,8 @@ if __name__ == "__main__":
 
     # create cursor
     cur = mydb.cursor()
-    cur.execute("SELECT id, name FROM states WHERE NAME LIKE 'N%' ORDER BY states.id")
+    cur.execute(
+        " SELECT id, name FROM states WHERE NAME LIKE 'N%' AND ASCII (NAME) < 97 ORDER BY states.id")
 
     # fetch all the selected states
     results = cur.fetchall()
