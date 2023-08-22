@@ -17,7 +17,7 @@ if __name__ == "__main__":
         "SELECT id, name FROM states WHERE name = {} Order by states.id".format(sys.argv[4]))
 
     # fetch the results
-    results = cur.fetchone()
+    results = cur.fetchall()
     print(results)
 
     # commit and close
