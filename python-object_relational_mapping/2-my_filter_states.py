@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # fetch the results
     results = cur.fetchall()
     for result in results:
-        if result == sys.argv[4]:
+        if result.name == sys.argv[4]:
             print(result)
 
     # commit and close
