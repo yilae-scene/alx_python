@@ -9,12 +9,14 @@ import sys
 
 if __name__ == "__main__":
     mydb = MySQLdb.connect(
-        host='localhost', user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
+        host='localhost', user=sys.argv[1], passwd=sys.argv[2],
+        port=3306, db=sys.argv[3])
 
     # create cursor
     cur = mydb.cursor()
     cur.execute(
-        "SELECT id, name FROM states WHERE name = '{}' AND ASCII (name) < 97".format(sys.argv[4]))
+        "SELECT id, name FROM states WHERE name ='{}' AND ASCII (name) < 97"
+        .format(sys.argv[4]))
 
     # fetch the results
     results = cur.fetchall()
