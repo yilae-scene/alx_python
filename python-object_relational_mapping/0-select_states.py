@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     # create cursor
     cur = mydb.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id")
+    cur.execute("SELECT id, name FROM states ORDER BY states.id")
 
     # fetch all the selected states
     results = cur.fetchall()
@@ -26,7 +26,7 @@ if __name__ == "__main__":
         print(result)
 
     # make sure it is stated in the mysql database
-    db.commit()
+    mydb.commit()
 
     # close cursor
     cur.close()
