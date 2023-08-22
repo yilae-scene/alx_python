@@ -27,8 +27,8 @@ if __name__ == "__main__":
     for result in results:
         print(result)
 
-    # make sure it is stated in the mysql database
+    '''make sure it is stated in the mysql database'''
     mydb.commit()
 
-    # close cursor
+    '''close cursor'''
     cur.close()
