@@ -23,5 +23,5 @@ if __name__ == "__main__":
         for result in results:
             print(result)
         # commit and close
-        mydbdb.commit()
+        mydb.commit()
         cur.close()
