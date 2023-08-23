@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # create a cursor
     cur = mydb.cursor()
     cur.execute(
-        "SELECT states.id, states.name, cities.name FROM states \
+        "SELECT cities.id, cities.name, states.name FROM states \
         INNER JOIN cities \
         WHERE states.id = cities.state_id \
         ORDER BY cities.id")
