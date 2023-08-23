@@ -1,6 +1,6 @@
 '''
-this is a module that tries to avoid 
-a user input SQL injection by trying 
+this is a module that tries to avoid
+a user input SQL injection by trying
 to filter keywords that might be used
 by user that will harm the SQL databases.
 '''
