@@ -16,7 +16,7 @@ if __name__ == "__main__":
     if 'TRUNCATE' in sys.argv[4] or 'DROP' in sys.argv[4] or 'SELECT' in sys.argv[4] or 'UPDATE' in sys.argv[4] or 'DELETE' in sys.argv[4]:
         print("use only one value")
     else:
-        cur.execute("SELECT id, name FROM states WHERE name = {}".format(sys.argv[4]))
+        cur.execute("SELECT id, name FROM states WHERE name = '{}'".format(sys.argv[4]))
 
         # print results
         results = cur.fetchall()
