@@ -30,7 +30,7 @@ if __name__ == "__main__":
         # print results
         result1 = [','.join(i) for i in results]
         if len(result1) == 0:
-            print(' ')
+            print('')
         for i in range(len(result1)):
             if i != len(result1) - 1:
                 print(result1[i], end=', ')
