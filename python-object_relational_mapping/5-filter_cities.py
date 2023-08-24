@@ -8,7 +8,8 @@ import sys
 
 if __name__ == "__main__":
     mydb = MySQLdb.connect(
-        host="localhost", user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
+        host="localhost", user=sys.argv[1],
+        passwd=sys.argv[2], port=3306, db=sys.argv[3])
 
     cur = mydb.cursor()
     if 'TURNICATE' in sys.argv[4] \
@@ -26,16 +27,9 @@ if __name__ == "__main__":
 
         # fetch the results
         results = cur.fetchall()
-        res = []
-        for i in range(len(results)):
-            res.append(results[i])
-
-        # print each index of list res
-        for i in range(len(res)):
-            if i != len(res)-1:
-                print(res[i], end=',')
-            else:
-                print(res[i])
+        # print results
+        print(','.join([i if not isinstance(i, tuple)
+              else ','.join(i) for i in results]))
 
         # commit and fetch
         mydb.commit()
