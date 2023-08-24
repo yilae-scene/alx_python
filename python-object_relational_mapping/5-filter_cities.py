@@ -26,8 +26,7 @@ if __name__ == "__main__":
 
         # fetch the results
         results = cur.fetchall()
-        for result in results:
-            print(result)
+        print(results)
 
         # commit and fetch
         mydb.commit()
