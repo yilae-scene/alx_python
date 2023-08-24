@@ -10,7 +10,7 @@ if __name__ == "__main__":
     mydb = MySQLdb.connect(
         host="localhost", user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
-    cur = mydb.connect()
+    cur = mydb.cursor()
     if 'TURNICATE' in sys.argv[4] \
             or 'SELECT' in sys.argv[4] \
             or 'DROP' in sys.argv[4] \
