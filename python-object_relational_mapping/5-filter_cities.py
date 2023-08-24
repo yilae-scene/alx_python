@@ -28,8 +28,8 @@ if __name__ == "__main__":
         # fetch the results
         results = cur.fetchall()
         # print results
-        print(','.join([i if not isinstance(i, tuple)
-              else ','.join(i) for i in results]))
+        print(', '.join([i if not isinstance(i, tuple)
+              else ', '.join(i) for i in results]))
 
         # commit and fetch
         mydb.commit()
