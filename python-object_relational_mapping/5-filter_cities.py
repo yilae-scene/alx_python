@@ -26,7 +26,11 @@ if __name__ == "__main__":
 
         # fetch the results
         results = cur.fetchall()
-        print(results)
+        for i in range(len(results)):
+            if i != len(results) - 1:
+                print(results[i], end = ',')
+            else:
+                print(results[i])
 
         # commit and fetch
         mydb.commit()
