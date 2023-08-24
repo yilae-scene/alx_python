@@ -28,6 +28,8 @@ if __name__ == "__main__":
         results = cur.fetchall()
         for i in range(len(results)):
             if i != len(results) - 1:
+                if ',' in results or '(' in results or ')' in results:
+                    print('')
                 print(results[i], end = ',')
             else:
                 print(results[i])
