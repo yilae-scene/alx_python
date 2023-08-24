@@ -25,7 +25,7 @@ if __name__ == "__main__":
                     (SELECT states.id \
                     FROM states \
                     WHERE states.name = '{}') \
-                    ORDER BY cities.id".format(sys.a[4]))
+                    ORDER BY cities.id".format(sys.agv[4]))
 
         # fetch the results
         results = cur.fetchall()
