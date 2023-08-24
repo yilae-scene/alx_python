@@ -19,11 +19,13 @@ if __name__ == "__main__":
         print('using not allowed keywords')
 
     else:
-        cur.execute("SELECT cities.name FROM cities \
-                    INNER JOIN states ON \
-                    cities.state_id = states.id \
-                    WHERE states.name = '{}' \
-                    ORDER BY cities.id".format(sys.argv[4]))
+        cur.execute("SELECT cities.name \
+                    FROM cities \
+                    WHERE cities.state_id = \
+                    (SELECT states.id \
+                    FROM states \
+                    WHERE states.name = '{}') \
+                    ORDER BY cities.id".format(sys.a[4]))
 
         # fetch the results
         results = cur.fetchall()
