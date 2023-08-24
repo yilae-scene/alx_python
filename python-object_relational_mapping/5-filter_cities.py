@@ -8,7 +8,7 @@ import sys
 
 if __name__ == "__main__":
     mydb = MySQLdb.connect(
-        host="localhost", user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+        host="localhost", user=sys.argv[1], passwd=sys.argv[2], port=3306, db=sys.argv[3])
 
     cur = mydb.cursor()
     if 'TURNICATE' in sys.argv[4] \
@@ -18,10 +18,11 @@ if __name__ == "__main__":
         print('using not allowed keywords')
 
     else:
-        cur.execute("SELECT id, name FROM cities \
+        cur.execute("SELECT name FROM cities \
                     INNER JOIN states ON \
                     cities.state_id = states.id \
-                    WHERE name = '{}' ".format(sys.argv[4]))
+                    WHERE name = '{}' \
+                    ORDER BY cities.id".format(sys.argv[4]))
 
         # fetch the results
         results = cur.fetchall()
