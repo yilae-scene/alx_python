@@ -26,13 +26,16 @@ if __name__ == "__main__":
 
         # fetch the results
         results = cur.fetchall()
+        res = []
         for i in range(len(results)):
-            if i != len(results) - 1:
-                if ',' in results or '(' in results or ')' in results:
-                    print('')
-                print(results[i], end = ',')
+            res.append(results[i])
+
+        # print each index of list res
+        for i in range(len(res)):
+            if i != len(res)-1:
+                print(res[i], end=',')
             else:
-                print(results[i])
+                print(res[i])
 
         # commit and fetch
         mydb.commit()
