@@ -18,7 +18,7 @@ if __name__ == "__main__":
         print('using not allowed keywords')
 
     else:
-        cur.execute("SELECT name FROM cities \
+        cur.execute("SELECT cities.name FROM cities \
                     INNER JOIN states ON \
                     cities.state_id = states.id \
                     WHERE states.name = '{}' \
