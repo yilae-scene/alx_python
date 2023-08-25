@@ -4,6 +4,7 @@ here we connect we import modules sqlalchemy to creat class used to create table
 # import modules
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Column, String
+
 base = declarative_base()
 
 
@@ -18,5 +19,5 @@ class State(base):
                 primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    # def __init__(self, name):
-    #     self.name = name
+    def __init__(self, name):
+        self.name = name
