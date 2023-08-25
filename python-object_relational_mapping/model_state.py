@@ -1,5 +1,5 @@
 """
-here we connect we import modules sqlalchemy to creat class used to create 
+here we connect we import modules sqlalchemy to creat class used to create
 table.
 """
 # import modules
@@ -10,7 +10,7 @@ Base = declarative_base()
 
 
 class State(Base):
-    """ a class that is used to create a table using 
+    """ a class that is used to create a table using
     sqlalchemy:-
     with id : INT
     and name : String attribues
