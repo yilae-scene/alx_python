@@ -15,9 +15,16 @@ if __name__ == "__main__":
         to create a table using 
         sqlalchemy
         """
-        __table__ ="state"
-        id = Column(Integer, unique=True, autoincrement=True, primary_key=True, nullable= False)
-        name = Column (String(128), nullable= False)
+        """ a class that is used
+        to create a table using 
+        sqlalchemy
+        """
+        __table__ = "state"
+        # create columns
+
+        id = Column(Integer, unique=True, autoincrement=True,
+                    primary_key=True, nullable=False)
+        name = Column(String(128), nullable=False)
 
         def __int__(self, name):
             self.name = name
