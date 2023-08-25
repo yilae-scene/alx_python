@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 # import modules
 from sqlalchemy.ext.declarative import declarative_base
@@ -13,6 +14,7 @@ base = declarative_base()
 
 
 class State(base):
+
     """ a class that is used to create a table using 
     sqlalchemy
     """
@@ -24,7 +26,7 @@ class State(base):
          name == that used for naming.
     """
 
-    __table__ = "state"
+    __table__ = "states"
     # create columns
     id = Column(Integer, unique=True, autoincrement=True,
                 primary_key=True, nullable=False)
