@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 
 # import modules
 from sqlalchemy.ext.declarative import declarative_base
@@ -14,9 +13,10 @@ base = declarative_base()
 class State(base):
 
     """ a class that is used to create a table using 
-    sqlalchemy
-     with id :
-     and name : attribues
+    sqlalchemy:-
+
+     with id : INT
+     and name : String attribues
     """
 
     __table__ = "states"
