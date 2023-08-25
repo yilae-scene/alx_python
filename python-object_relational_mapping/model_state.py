@@ -9,8 +9,13 @@ from sqlalchemy import Integer, Column, String
 base = declarative_base()
 
 if __name__ == "__main__":
-    
+
     class State(base):
+        """ a class that is used
+        to create a table using 
+        sqlalchemy
+        """
+        __table__ ="state"
         id = Column(Integer, unique=True, autoincrement=True, primary_key=True, nullable= False)
         name = Column (String(128), nullable= False)
 
