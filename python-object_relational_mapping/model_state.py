@@ -17,11 +17,11 @@ class State(base):
     sqlalchemy
      with id :
      and name : attribues
-     
     """
 
     __table__ = "states"
     # create columns
+
     id = Column(Integer, unique=True, autoincrement=True,
                 primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
