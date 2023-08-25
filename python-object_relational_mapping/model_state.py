@@ -10,10 +10,8 @@ base = declarative_base()
 
 
 class State(base):
-
     """ a class that is used to create a table using 
     sqlalchemy:-
-
      with id : INT
      and name : String attribues
     """
