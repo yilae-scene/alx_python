@@ -18,5 +18,5 @@ class State(base):
                 primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    def __int__(self, name):
+    def __init__(self, name):
         self.name = name
