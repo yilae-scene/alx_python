@@ -1,13 +1,13 @@
+
+# import modules
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Integer, Column, String
+
 """
 here we connect we import modules
 sqlalchemy to creat class used
 to create table.
 """
-# import from modules
-
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Integer, Column, String
-
 base = declarative_base()
 
 if __name__ == "__main__":
