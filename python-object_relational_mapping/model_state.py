@@ -5,9 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Column, String
 
 """
-here we connect we import modules
-sqlalchemy to creat class used
-to create table.
+here we connect we import modules sqlalchemy to creat class used to create table.
 """
 
 base = declarative_base()
@@ -17,13 +15,9 @@ class State(base):
 
     """ a class that is used to create a table using 
     sqlalchemy
-    """
-    """ a class that is used to create a table using 
-    sqlalchemy
-    Attributes:
-
-         id == that will auto_increment
-         name == that used for naming.
+     with id :
+     and name : attribues
+     
     """
 
     __table__ = "states"
