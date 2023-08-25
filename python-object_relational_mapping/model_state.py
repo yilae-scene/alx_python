@@ -3,20 +3,22 @@ here we connect we import modules
 sqlalchemy to creat class used
 to create table.
 """
+# import from modules
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Integer, Column, String
 
 base = declarative_base()
 
 if __name__ == "__main__":
+    """make sure that your class doesn't work \
+    if not imported """
 
     class State(base):
-        """ a class that is used
-        to create a table using 
+        """ a class that is used to create a table using 
         sqlalchemy
         """
-        """ a class that is used
-        to create a table using 
+        """ a class that is used to create a table using 
         sqlalchemy
         """
         __table__ = "state"
