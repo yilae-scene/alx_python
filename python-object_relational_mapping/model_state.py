@@ -20,7 +20,12 @@ if __name__ == "__main__":
         """
         """ a class that is used to create a table using 
         sqlalchemy
+        Attributes:
+
+         id == that will auto_increment
+         name == that used for naming.
         """
+        
         __table__ = "state"
         # create columns
 
