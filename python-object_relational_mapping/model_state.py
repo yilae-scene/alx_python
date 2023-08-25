@@ -1,7 +1,7 @@
 
 # import modules
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Integer, Column, String
+# from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy import Integer, Column, String
 
 """
 here we connect we import modules
