@@ -23,5 +23,5 @@ if __name__ == "__main__":
     if result.rowcount == 0:
         print("Nothing")
     else:
-        print("{}{}".format(result[0], result[1]))
+        print("{}:{}".format(result.id, result.name))
         
