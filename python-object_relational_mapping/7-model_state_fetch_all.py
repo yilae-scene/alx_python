@@ -16,8 +16,8 @@ if __name__ == "__main__":
 
     path = "Mysql+Mysqldb://{}:{}@localhost:3306/{}".format(user, passwd, db)
     mydb = create_engine(path)
-    session = sessionmaker(bind=mydb)
-    new_session = session()
+    Session = sessionmaker(bind=mydb)
+    new_session = Session()
 
     for instance in new_session.query(State):
         print("{:d}:{}".format(instance.id, instance.name))
