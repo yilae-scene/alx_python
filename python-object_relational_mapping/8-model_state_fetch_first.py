@@ -18,6 +18,7 @@ if __name__ == "__main__":
         "mysql+mysqldb://{}:{}@localhost:3306/{}".format(user, passwd, db))
     Session = sessionmaker(bind=mydb)
     new_session = Session()
+    
     #print
     result = new_session.query(State).first()
     if result.count() == 0:
