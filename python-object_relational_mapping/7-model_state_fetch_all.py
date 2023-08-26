@@ -13,10 +13,12 @@ passwd = sys.argv[2]
 db = sys.argv[3]
 if __name__ == "__main__":
 
-    mydb = creating_engine("Mysql+Mysqldb://{}:{}@loclhost:3306/{}".format(user, passwd, db))
-    Session = sessionmaker(bind=mydb)
-    new_session = Session()
+    path = ("Mysql+Mysqldb://{}:{}@loclhost:3306/{}".format(user, passwd, db))
 
-    for instance in new_session.query(State):
+    mydb = creating_engine(path)
+    Session = sessionmaker(bind=mydb)
+    session = Session()
+
+    for instance in session.query(State):
         print("{}:{}".format(instance.id, instance.name))
     
