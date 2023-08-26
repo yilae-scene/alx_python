@@ -19,5 +19,5 @@ if __name__ == "__main__":
     session = sessionmaker(bind=mydb)
     new_session = session()
 
-    for instance in session.query(State).order_by(State.id):
+    for instance in new_session.query(State).order_by(State.id):
         print("{}:{}".format(State.id, State.name))
