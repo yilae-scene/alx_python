@@ -19,5 +19,5 @@ if __name__ == "__main__":
     session = sessionmaker(bind=mydb)
     new_session = session()
 
-    for instance in new_sessionsession.query(State):
+    for instance in new_session.query(State):
         print("{:d}:{}".format(instance.id, instance.name))
