@@ -19,5 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=mydb)
     new_session = Session()
 
-    for instance in new_session.query(State).order_by(State.id):
-        print("{:d}: {}".format(instance.id, instance.name))
+    # print
+    result = new_session.query(State).order_by(
+        State.id).filter(State.name.like('%a%'))
+
+    print("{}: {}".format(result.id, result.name))
