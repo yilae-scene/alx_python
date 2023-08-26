@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 create a script that lists all for states using
 sqlalchemy.
