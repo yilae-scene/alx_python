@@ -20,7 +20,7 @@ if __name__ == "__main__":
     new_session = Session()
     #print
     result = new_session.query(State).first()
-    if result.rowcount == 0:
+    if result.count() == 0:
         print("Nothing")
     else:
         print("{}:{}".format(result.id, result.name))
