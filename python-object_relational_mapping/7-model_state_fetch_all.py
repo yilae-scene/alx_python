@@ -19,6 +19,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=mydb)
     new_session = Session()
 
-    q = Query(mappedClass, session).all()
-    for s in q:
-        print(s.id, s.name)
+    for instance in new_session.query(State).order_by(State.id):
+        print("{}:{}".format(instance.id, instance.name))
