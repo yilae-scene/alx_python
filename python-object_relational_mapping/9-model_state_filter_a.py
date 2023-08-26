@@ -20,5 +20,7 @@ if __name__ == "__main__":
     new_session = Session()
 
     # print
-    result = new_session.query(State).filter(State.name.ilike('%a%')).all()
-    print(result)
+    results = new_session.query(State).filter(State.name.ilike('%a%')).all()
+    
+    for result in results:
+        print(result)
