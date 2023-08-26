@@ -21,6 +21,6 @@ if __name__ == "__main__":
 
     # print
     results = new_session.query(State).filter(State.name.ilike('%a%')).all()
-    
+
     for result in results:
-        print("{}{}".format(result.id, result.name))
+        print("{}: {}".format(result.id, result.name))
