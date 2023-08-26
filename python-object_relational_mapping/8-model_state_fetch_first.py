@@ -19,9 +19,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=mydb)
     new_session = Session()
 
-    result = session.query(State).filter(State.id < 2)
+    result = session.query(State).first().fetchone()
     # print 
-    if len(result) == 0:
-        print()
-    else:
-        print(result)
+    print(result)
