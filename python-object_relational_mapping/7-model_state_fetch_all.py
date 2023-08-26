@@ -3,7 +3,7 @@
 create a script that lists all for states using
 sqlalchemy.
 """
-# import modules
+# import moduless
 import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
