@@ -19,6 +19,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=mydb)
     session = Session()
 
-    for instance in session.query(State):
-        print("{}:{}".format(instance.id, instance.name))
+    result = session.query(State).all()
+    for row in result:
+        print ("{}:{} ".format(row.id,row.name))
     
