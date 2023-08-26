@@ -14,7 +14,7 @@ passwd = sys.argv[2]
 db = sys.argv[3]
 if __name__ == "__main__":
 
-    path = "Mysql+Mysqldb://{}:{}@localhost:3306/{}".format(user, passwd, db)
+    path = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(user, passwd, db)
     mydb = create_engine(path)
     Session = sessionmaker(bind=mydb)
     new_session = Session()
