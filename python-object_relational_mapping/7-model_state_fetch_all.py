@@ -8,14 +8,11 @@ from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
-user = sys.argv[1]
-passwd = sys.argv[2]
-db = sys.argv[3]
 if __name__ == "__main__":
 
     #path = ()
 
-    engine = creating_engine("Mysql+Mysqldb://{}:{}@loclhost:3306/{}".format(user, passwd, db))
+    engine = creating_engine("Mysql+Mysqldb://{}:{}@loclhost:3306/{}".format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
 
