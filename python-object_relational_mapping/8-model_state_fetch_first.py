@@ -19,7 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=mydb)
     new_session = Session()
 
-    # Filter by the first 
-    for instance in new_session.query(State).filter_by(id = 1):
-        # Print First State
-        print("{:d}: {}".format(instance.id, instance.name))
+    result = session.query(State).filter(State.id < 2)
+    if len(result) == 0:
+        print()
+    else:
+        print(result)
