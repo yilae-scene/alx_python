@@ -7,6 +7,7 @@ import sys
 from sqlalchemy import create_engine
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
+
 user = sys.argv[1]
 passwd = sys.argv[2]
 db = sys.argv[3]
