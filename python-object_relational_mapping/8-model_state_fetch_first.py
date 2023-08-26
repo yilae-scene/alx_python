@@ -18,6 +18,6 @@ if __name__ == "__main__":
         "mysql+mysqldb://{}:{}@localhost:3306/{}".format(user, passwd, db))
     Session = sessionmaker(bind=mydb)
     new_session = Session()
-
+    #print
     for instance in new_session.query(State).first().fetchone():
         print("{:d}: {}".format(instance.id, instance.name))
