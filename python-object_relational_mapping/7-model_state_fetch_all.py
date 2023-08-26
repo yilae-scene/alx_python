@@ -16,6 +16,6 @@ if __name__ == "__main__":
     session = Session()
 
     for instance in session.query(State):
-        print("{}:{}".format(instance.id, instance.name))
+        print("{:d}:{}".format(instance.id, instance.name))
     
     
