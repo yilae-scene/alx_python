@@ -39,7 +39,7 @@ def c_is(variable_name):
 def python_is(variable_name):
     name = variable_name.split("_")
     new_name = ' '.join(name)
-    return ("python {}".format(escape(new_name)))
+    return ("Python {}".format(escape(new_name)))
 
 
 if __name__ == "__main__":
