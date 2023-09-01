@@ -5,10 +5,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
+# the home page route
 @app.route("/", strict_slashes=False)
 def index():
     return "Hello HBNB!"
+
+# add another route
 @app.route("/hbnb", strict_slashes=False)
 def index():
     return "HBNB!"
