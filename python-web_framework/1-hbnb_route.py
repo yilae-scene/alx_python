@@ -16,7 +16,8 @@ def index():
 
 # add another route
 @app.route("/hbnb", strict_slashes=False)
-def index():
+def sub_route():
+    " this will route to subroute of hbnb"
     return "HBNB!"
 
 
