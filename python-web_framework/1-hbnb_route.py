@@ -8,6 +8,10 @@ app = Flask(__name__)
 # the home page route
 @app.route("/", strict_slashes=False)
 def index():
+    """
+    this is a function that has a single slash and 
+    is usually reserved for home directory 
+    """
     return "Hello HBNB!"
 
 # add another route
