@@ -21,11 +21,11 @@ def sub_route():
     " this will route to subroute of hbnb"
     return "HBNB"
 
-@app.route("/c/<variable_name")
-def c_is(name):
+@app.route("/c/<variable_name>")
+def c_is(variable_name):
         name = variable_name.split("_")
-        ' '.joint(name)
-        return ("C {}".forrmat(escape(name)))
+        new_name = ' '.join(name)
+        return ("C {}".format(escape(new_name)))
 if __name__ == "__main__":
     # web application must be listening on 0.0.0.0, port 5000
     app.run(debug=True, host="0.0.0.0")
