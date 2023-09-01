@@ -18,7 +18,7 @@ def index():
 @app.route("/hbnb", strict_slashes=False)
 def sub_route():
     " this will route to subroute of hbnb"
-    return "HBNB!"
+    return "HBNB"
 
 
 if __name__ == "__main__":
