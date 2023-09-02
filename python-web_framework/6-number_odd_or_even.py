@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 a simple basic server creation with a route to the one page
 """
